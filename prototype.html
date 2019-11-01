@@ -1,0 +1,18 @@
+<script>
+  var AstronautConstructor = function (name) {
+      this.name = name;
+      var mission = 'Mission to Mars I';
+
+      var getName = function() {
+          return this.name;
+      }
+  }
+
+  AstronautConstructor.prototype = {
+      numberOfMissions: 4
+  }
+
+  var mladen = new AstronautConstructor('Mladen Krivacevic');
+
+  debugger;
+</script>
