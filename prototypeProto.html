@@ -1,0 +1,40 @@
+<script>
+  // By using the __proto__ keyword (not standard)
+  var myObj = {
+    myString: "Hello world!"
+  };
+  var mySecondObj = {};
+  var myThirdObj = {};
+
+  var myPrototype = {
+    meaningOfLife: 42,
+    myFunc: function () {
+      return this.myString.toLowerCase();
+    }
+  };
+
+  myObj.__proto__ = myPrototype;
+  mySecondObj.__proto__ = myPrototype;
+  myThirdObj.__proto__ = myPrototype;
+
+  myObj.__proto__.meaningOfLife = 44;
+  mySecondObj.__proto__.meaningOfLife // 44
+  myThirdObj.__proto__.meaningOfLife // 44
+
+  myThirdObj.__proto__.meaningOfLife = 45
+  myObj.__proto__.meaningOfLife; // 45
+  mySecondObj.__proto__.meaningOfLife // 45
+
+  myObj.meaningOfLife =
+    87; // Ovako ne mijenjamo prototip vec stvaramo (u samom objektu, a ne dolje u prototipu) promjenljivu
+  // meaningOfLife i dajemo joj vrijednost 87, dok ce promjenljiva meaningOfLife koja se nalazi u
+  // prototipu i dalje imati vrijednost 45
+  // myObj
+  //   {myString: "Hello world!", meaningOfLife: 87}
+  //   meaningOfLife: 87
+  //   myString: "Hello world!"
+  //   __proto__:
+  // meaningOfLife: 45
+  // myFunc: ƒ ()
+  // __proto__: Object
+</script>
