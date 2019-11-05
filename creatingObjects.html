@@ -32,4 +32,22 @@
   }
 
   var o = thing();
+
+  // In fact, this is such a common pattern that the language has built-in support for it.
+  // We don’t need to create our own shared object (the prototype object).
+  // Instead, a prototype object is created for us automatically alongside every function,
+  // and we can put our shared data there:
+  thing.prototype.f = function () {};
+  thing.prototype.g = function () {};
+
+  function thing() {
+    var o = Object.create(thing.prototype);
+
+    o.x = 42;
+    o.y = 3.14;
+
+    return o;
+  }
+
+  var o = thing();
 </script>
