@@ -1,0 +1,13 @@
+<script>
+  // Creating objects using Factory Function(s)
+  function thing(someVar) {
+    return {
+      x: someVar,
+      y: 3.14,
+      f: function () {},
+      g: function () {}
+    };
+  }
+
+  var o = thing(44); // This should be the same as var o = new thing(44);
+</script>
