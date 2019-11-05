@@ -16,6 +16,20 @@
 
   // -------------------------------------------------------------------------------------------
 
-  // Creating object(s) using Prototype Chains
+  // Creating object(s) using Prototype Chains (by using Object.create)
+  var thingPrototype = {
+    f: function () {},
+    g: function () {}
+  };
 
+  function thing() {
+    var o = Object.create(thingPrototype);
+
+    o.x = 42;
+    o.y = 3.14;
+
+    return o;
+  }
+
+  var o = thing();
 </script>
