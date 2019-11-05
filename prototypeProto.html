@@ -26,9 +26,9 @@
   mySecondObj.__proto__.meaningOfLife // 45
 
   myObj.meaningOfLife =
-    87; // Ovako ne mijenjamo prototip vec stvaramo (u samom objektu, a ne dolje u prototipu) promjenljivu
-  // meaningOfLife i dajemo joj vrijednost 87, dok ce promjenljiva meaningOfLife koja se nalazi u
-  // prototipu i dalje imati vrijednost 45
+    87; // This way we're not changing the prototype but we're creating (u samom objektu, a ne dolje u prototipu) a variable
+  // meaningOfLife and we're giving it a value of 87, while a variable meaningOfLife which is locatend in a
+  // prototype will still have the value 45
   // myObj
   //   {myString: "Hello world!", meaningOfLife: 87}
   //   meaningOfLife: 87
