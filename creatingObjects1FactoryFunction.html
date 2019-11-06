@@ -1,0 +1,18 @@
+<script>
+  // https://www.sitepoint.com/javascript-object-creation-patterns-best-practises/
+
+  // Creating objects using Factory Function(s)
+  function thing(someVar) {
+    return {
+      x: someVar,
+      y: 3.14,
+      f: function () {},
+      g: function () {}
+    };
+  }
+
+  var o = thing(44); // This should be the same as var o = new thing(44);
+  // But there’s a drawback. This approach of JavaScript object creation can cause memory bloat,
+  // because each object contains its own unique copy of each function.
+  // Ideally, we want every object to share just one copy of its functions.
+</script>
