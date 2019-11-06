@@ -25,16 +25,16 @@
   myObj.__proto__.meaningOfLife; // 45
   mySecondObj.__proto__.meaningOfLife // 45
 
-  myObj.meaningOfLife =
-    87; // This way we're not changing the prototype but we're creating (u samom objektu, a ne dolje u prototipu) a variable
-  // meaningOfLife and we're giving it a value of 87, while a variable meaningOfLife which is locatend in a
-  // prototype will still have the value 45
-  // myObj
-  //   {myString: "Hello world!", meaningOfLife: 87}
-  //   meaningOfLife: 87
-  //   myString: "Hello world!"
-  //   __proto__:
-  // meaningOfLife: 45
-  // myFunc: ƒ ()
-  // __proto__: Object
+  myObj.meaning =
+    87; // This way we're not changing the prototype but we're creating (in the object itself, and not down there in the prototype) a variable
+        // meaningOfLife and we're giving it a value of 87, while a variable meaningOfLife which is locatend in a
+        // prototype will still have the value 45. So with that we're getting the following (in myObj object):
+        //
+        // meaning: 87
+        // myString: "Hello world!"
+        // __proto__:
+        //   meaningOfLife: 45
+        //   myFunc: ƒ ()
+        //  __proto__: Object
+  console.log(myObj);
 </script>

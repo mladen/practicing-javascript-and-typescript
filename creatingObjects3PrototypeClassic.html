@@ -9,7 +9,7 @@
   thing.prototype.g = function () {};
 
   function thing() {
-    var o = Object.create(thing.prototype);
+    var o = Object.create(thing.prototype); // Object.create creates a new Object with the prototype set to a certain object
 
     o.x = 42;
     o.y = 3.14;
@@ -18,4 +18,7 @@
   }
 
   var o = thing();
+  // But there’s a drawback. This is going to result in some repetition.
+  // The first and last lines of the thing function are going to be repeated almost
+  // verbatim in every such delegating-to-prototype factory function.
 </script>
