@@ -1,23 +1,23 @@
 <script>
-    var profile = {
-        firstName: '',
-        lastName: '',
-        setName: function (fullName) {
-            let splitName = function (name) {
-                let nameArray = name.split(' ');
+  var profile = {
+    firstName: '',
+    lastName: '',
+    setName: function (fullName) {
+      let splitName = function (name) {
+        let nameArray = name.split(' ');
 
-                this.firstName = nameArray[0];
-                this.lastName = nameArray[1];
+        this.firstName = nameArray[0];
+        this.lastName = nameArray[1];
 
-                debugger;
-            }
+        debugger;
+      }
 
-            splitName(fullName);
-        }
+      splitName(fullName);
     }
+  }
 
-    profile.setName('Mladen Krivacevic');
-    console.log(window.firstName);
+  profile.setName('Mladen Krivacevic');
+  console.log(window.firstName);
 
-    debugger;
+  debugger;
 </script>
