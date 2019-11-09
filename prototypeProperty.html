@@ -1,18 +1,50 @@
 <script>
-  var AstronautConstructor = function (name) {
-    this.name = name;
-    var mission = 'Mission to Mars I';
+  // https://www.crockford.com/javascript/private.html
 
-    this.getName = function () {
+  // CHECK: With "this" we get public properties. Without this we get private properties.
+
+  var AstronautConstructor = function (name) { // This is what we call a "Constructor function" because with it we construct our instances
+    var that = this; // By convention, we make a private that variable. This is used to make the object
+                     // available to the private methods. This is a workaround for an error in the ECMAScript
+                     // Language Specification which causes this to be set incorrectly for inner functions.
+
+    this.publicName = name; // This is a PUBLIC property
+    var privateMission = 'Mission to Mars I'; // This is a PRIVATE property (not accessible to the outside or the
+                                       // objects own PUBLIC methods - that are generaly built by using the prototype)
+                                       // PRIVATE properties are accessible to PRIVATE methods. Private methods are inner functions of the constructor.
+
+    privateMissionReturn = function () { // This is a PRIVATE function
+      return privateMission;
+    }
+
+    // PRIVILEGED methods are assigned with this within the constructor (Crockford)
+    this.privilegedGetName = function () {
       return this.name;
+    }
+
+    this.privilegedGetMission = function () { // PRIVILEGED method for getting a PRIVATE property
+      // privateMissionReturn(); // Private methods cannot be called by public methods.
+                              // To make private methods useful, we need to introduce a privileged method.
+
+      return privateMission;
+    }
+
+    this.privilegedSetMission = function(privateMissionTitle) { // PRIVILEGED method for setting a PRIVATE property
+      privateMission = privateMissionTitle;
     }
   }
 
+  // We can add PUBLIC methods using prototype
+  // (This way of adding methods conserves memory)
   AstronautConstructor.prototype = {
-    numberOfMissions: 4
+    numberOfMissions: 4,
+    publicGetMission: function () {
+      return this.privateMission; // Returns "undefined" because PUBLIC methods cannot access PRIVATE properties
+                           // Only a PRIVILEGED method is able to access the PRIVATE variables and methods,
+                           // and is itself accessible to the public methods and the outside. (Crockford)
+    }
   }
 
-  var mladen = new AstronautConstructor('Mladen Krivacevic');
-
-  debugger;
+  var sofija = new AstronautConstructor('Sofija Krivacevic');
+  var jana = new AstronautConstructor('Jana Krivacevic');
 </script>
