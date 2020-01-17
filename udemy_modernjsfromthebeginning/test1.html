@@ -12,21 +12,38 @@
 
 <script>
   // CONST
+
+  /*
+    CONST VARIABLE
+    */
   const firstName = 'Max'
   console.log(firstName)
   // firstName = "Johnnie" // We cannot do this
   // console.log(firstName)
 
+  /*
+    CONST OBJECT (or ARRAY)
+  */
   // Objects, arrays (and other types of data that are not primitive
   // as numbers) can be changed but not reassigned
-  const person = {
+  const person = { // This is an Object literal
     name: 'John',
     age: 39
   }
 
   console.log(person.name);
   console.log('Changing the person.name');
-  person.name = 'Will';
+  person.name = 'Will'; // Succesfully changed
   console.log(person.name);
+  person.dog = 'Mickie'; // Succesfully changed
+  console.log(person.dog);
+
+  // Trying to reassign
+  person = { // Unable to do this of course! If person vas initially defined with "let" this would be possible
+    name: 'Mary',
+    age: 41
+  }
+  console.log(person.name)
+
 </script>
 </html>
