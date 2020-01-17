@@ -22,7 +22,7 @@
   // console.log(firstName)
 
   /*
-    CONST OBJECT (or ARRAY)
+    CONST OBJECT
   */
   // Objects, arrays (and other types of data that are not primitive
   // as numbers) can be changed but not reassigned
@@ -39,11 +39,21 @@
   console.log(person.dog);
 
   // Trying to reassign
-  person = { // Unable to do this of course! If person vas initially defined with "let" this would be possible
-    name: 'Mary',
-    age: 41
-  }
-  console.log(person.name)
+  // person = { // Unable to do this of course! If person vas initially defined with "let" this would be possible
+  //   name: 'Mary',
+  //   age: 41
+  // }
+  // console.log(person.name)
 
+  /*
+    CONST ARRAY
+  */
+  const numbers = [1, 5, 2, 8, 3]
+  numbers.push(6)
+  console.log(numbers)
+
+  // Trying to reassign numbers array to a totally new array
+  // numbers = [7, 1, 4] // Unable to reassign numbers array to a new array because the numbers array was initialized with "const"
+  // console.log(numbers)
 </script>
 </html>
