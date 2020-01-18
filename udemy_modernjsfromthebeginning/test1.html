@@ -55,5 +55,12 @@
   // Trying to reassign numbers array to a totally new array
   // numbers = [7, 1, 4] // Unable to reassign numbers array to a new array because the numbers array was initialized with "const"
   // console.log(numbers)
+
+  // I should use "const" unless planing on value changing, unless I need to initialize it
+  // or unless I'm using it in an iterator or a loop.
+  // Other than that, using "const" lets my program and anyone looking
+  // at my code know that this value should not be reassigned (it can mutate
+  // if it's an array or object, but it cannot be reassigned as a new
+  // primitive value)
 </script>
 </html>
