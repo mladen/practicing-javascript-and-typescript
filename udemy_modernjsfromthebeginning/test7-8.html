@@ -44,29 +44,30 @@
     Type conversion
   */
   let val // We cannot do something like this using const (const must have a value)
-  val = 35
-
-  console.log(val)
-  console.log(typeof val)
-  console.log(val.length) // "undefined" because "length" is a function of a string, and currently "val" is a Number
-  console.log('---')
+  // val = 35 // val.length gives "undefined" because "length" is a function of a string, and currently "val" is a Number
 
   // Number to string
-  val = String(35)
-
-  console.log(val)
-  console.log(typeof val)
-  console.log(val.length) // Now "val" contains a String (we've converted the Number 5 into a String)
-  console.log('---')
+  // val = String(35) // Now "val" contains a String (we've converted the Number 5 into a String)
 
   // Expression to a string
-  val = String(5+7) // The first thing that's gonna happen is that the expression is going to be evaluated
+  // val = String(5+7) // The first thing that's gonna happen is that the expression is going to be evaluated
                     // and only than the conversion (to a String) of that result will happen
+
+  // Bool to a string
+  // val = String(true)
+
+  // Date to a string
+  // val = String(new Date())
+
+  // Array to a string
+  val = String([1, 2, 3, 4])
+
+  // Alternative to String() would be to use toString()
+  // val = (5).toString();
+  val = (true).toString();
 
   console.log(val)
   console.log(typeof val)
-  console.log(val.length) // Now "val" contains a String (we've converted the Number 5 into a String)
-  console.log('---')
-
+  console.log(val.length)
 </script>
 </html>
