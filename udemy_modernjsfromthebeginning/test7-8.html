@@ -46,7 +46,9 @@
   let val // We cannot do something like this using const (const must have a value)
   // val = 35 // val.length gives "undefined" because "length" is a function of a string, and currently "val" is a Number
 
-  // Number to string
+  /*
+    Type conversion: Number to string
+  */
   // val = String(35) // Now "val" contains a String (we've converted the Number 5 into a String)
 
   // Expression to a string
@@ -69,5 +71,20 @@
   console.log(val)
   console.log(typeof val)
   console.log(val.length)
+  console.log('---')
+
+  /*
+    Type conversion: String to Number
+  */
+  // val = Number('5'); // Parsing a String as a Number
+  // val = Number(true)
+  // val = Number(false)
+  // val = Number(null)
+  // val = Number('hello')
+  val = Number([1, 2, 3])
+
+  console.log(val)
+  console.log(typeof val)
+  console.log(val.toFixed())
 </script>
 </html>
