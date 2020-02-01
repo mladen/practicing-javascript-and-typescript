@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    .col {
+      padding-top: 20px;
+    }
+    .main-title {
+      margin-bottom: 30px;
+    }
+    .col,
+    .card,
+    .card-content,
+    .card-title {
+      border: thin solid red;
+    }
+
+    .card {
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>When we click "First card" every existing/attached event (in this example), up to the top one, will be triggered because of event bubbling: .card-title, .card-content, .card and .col (in that order)</h1>
+  <div class="col">
+    (.col)
+    <!-- <h2 class="main-title">List of cards</h2> -->
+
+    <div class="card">
+      (.card)
+      <div class="card-content">
+        (.card-content)
+        <div class="card-title">First card (.card-title)</div>
+      </div>
+    </div>
+    <div class="card">
+      (.card)
+      <div class="card-content">
+        (.card-content)
+        <div class="card-title">Second card (.card-title)</div>
+      </div>
+    </div>
+    <div class="card">
+      (.card)
+      <div class="card-content">
+        (.card-content)
+        <div class="card-title">Third card (.card-title)</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.col').addEventListener('click', function() {
+      console.log('.col');
+    });
+
+    document.querySelector('.card').addEventListener('click', function() {
+      console.log('.card');
+    });
+
+    document.querySelector('.card-content').addEventListener('click', function() {
+      console.log('.card-content');
+    });
+
+    document.querySelector('.card-title').addEventListener('click', function() {
+      console.log('.card-title');
+    });
+  </script>
+</body>
+</html>
