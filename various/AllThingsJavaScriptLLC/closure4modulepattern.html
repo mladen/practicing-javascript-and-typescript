@@ -1,0 +1,29 @@
+<script>
+// Ova skripta ce se izvrsiti cim se startuje stranica
+
+// Ova promjenljiva APP ce sadrzati sadrzaj onoga
+// sto smo vratili uz pomoc "return" izraza na kraju
+// Sta smo vratili? Nesto sto smo definisali u ovom
+// modulu. (Jedno je sumIt funkcija, a drugo je
+// multiplyIt funkcija)
+var APP = (function module() {
+  let a = 3;
+
+  let printIt = function printIt(val) {
+    console.log(val);
+  };
+
+  let sumIt = function sumIt(b) {
+    printIt(a + b);
+  };
+
+  let multiplyIt = function multiplyIt(b) {
+    printIt(a * b);
+  };
+
+  return {
+    sumIt: sumIt,
+    multiplyIt: multiplyIt
+  };
+}());
+</script>
