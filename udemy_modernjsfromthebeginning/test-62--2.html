@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Test</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  
+  <script type="text/javascript">
+    // CALLBACK funkcije
+
+    const posts = [
+      {title: 'prvi naslov', text: 'prvi tekst'},
+      {title: 'drugi naslov', text: 'drugi tekst'}
+    ];
+
+    function createPost(post, callback) {
+      setTimeout(function() {
+        console.log('Iz createPost...');
+        posts.push(post);
+        callback();
+        console.log('Nakon pozivanja getPosta, koji se jos uvijek izvrsava...');
+      }, 1000);
+    }
+
+    function getPosts() {
+      setTimeout(function() {
+        console.log('Iz getPosts...', posts);
+      }, 3000);
+    }
+
+    createPost({ title: 'Treci post', text: 'Treci tekst' }, getPosts);
+
+    // Zakljucak: Dakle, koliko god da traje createPost, prvo ce se on izvrsiti, pa ce tek
+    // nakon toga biti pozvana getPosts funkcija kao callback
+  </script>
+</body>
+</html>

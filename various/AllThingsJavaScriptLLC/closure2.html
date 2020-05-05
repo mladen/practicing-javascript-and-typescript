@@ -1,0 +1,17 @@
+<script>
+let outerFunct = function outerFunct() {
+  // Sve ovo ovdje je opseg funkcije outerFunct()
+  let a = 2,
+      b = 3;
+
+      let innerFunct = function innerFunct() {
+        console.log(a + b);
+      };
+
+      setTimeout(innerFunct, 3000); // Cekamo 3s (tokom cega ce ova
+                                    // skripta vec zavrsiti sa radom)
+                                    // nakon cega ce se pozvati innerFunct
+};
+
+outerFunct();
+</script>

@@ -1,0 +1,32 @@
+<html>
+<body>
+    <button id="jedan">Jedan</button>
+    <button id="dva">Dva</button>
+
+    <script>
+      // Dakle, pravimo jedan balon u kojem nam se nalazi
+      // sve sto nam treba za odredjeni (HTML) element, blok ili sl.
+      (function counter() {
+        let counter = 0,
+            button1 = document.querySelector("#jedan"),
+            button2 = document.querySelector("#dva");
+
+        let print = function print() {
+          console.log(counter);
+        }
+
+        button1.addEventListener("click", function count1() {
+          counter++;
+          print();
+        });
+
+        button2.addEventListener("click", function count2() {
+          counter++;
+          print();
+        });
+      }());
+
+      // counter();
+    </script>
+</body>
+</html>

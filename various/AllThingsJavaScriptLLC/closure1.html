@@ -1,0 +1,26 @@
+<script>
+// Ovaj primjer samo demonstrira opseg, a ne Closure.
+// U sledecem primjeru (closure2) ce biti Closure.
+let outerFunct = function outerFunct() {
+  // Sve ovo ovdje je opseg funkcije outerFunct()
+  let a = 2,
+      b = 3;
+
+      let innerFunct = function innerFunct() {
+        console.log(a + b);
+      };
+
+      innerFunct();
+};
+
+let outerFunct2 = function outerFunct2() {
+  console.log(a + b);
+};
+
+outerFunct();
+
+outerFunct2(); // Ova f-ija ne vidi a i b promjenljive
+               // jer su one unutar outerFunct()
+
+               // Funkcija innerFunct vidi a i b
+</script>
