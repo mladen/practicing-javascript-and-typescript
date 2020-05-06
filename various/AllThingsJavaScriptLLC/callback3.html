@@ -1,0 +1,55 @@
+<script>
+  let students = [
+    { name: "Mary", score: 90, school: "East" },
+    { name: "James", score: 100, school: "East" },
+    { name: "Steve", score: 40, school: "East" },
+    { name: "Gabe", score: 90, school: "West" },
+    { name: "Rachel", score: 85, school: "East" },
+    { name: "Rochelle", score: 95, school: "West" },
+    { name: "Lynette", score: 75, school: "East" }
+  ];
+
+  let processStudents = function(data, callback) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].school.toLowerCase() === "east") {
+        if (typeof callback === "function") {
+          callback(data[i]);
+        }
+      }
+    }
+  };
+
+  // Dakle, sada pozivamo funkciju processStudents koju
+  // smo gore definisali, predajemo joj listu studenata
+  // a predajemo i Callback funkciju (callback) koji
+  // ce u funkciji processStudents nesto odraditi
+  // (u slucaju f-ije processStudents callback ce uzeti
+  // trenutni clan niza i uradice vec sta treba...)
+  processStudents(students, function(obj) {
+    if (obj.score > 60) {
+      console.log(obj.name + " passed.");
+    }
+  });
+
+  // Ajde jos jednom da pozovemo f-iju processStudents
+  // kako bismo pokazali fleksibilnost callback koncepta
+  // Posto nam je potrebno jos nekoliko promjenljivih,
+  // a da ne bismo zagadjivali globalni opseg, napravicemo prvo
+  // Closure (cime cemo napraviti jedan "baloncic" u okviru
+  // kojeg cemo imati sve sto nam je potrebno od informacija)
+  let determineTotal = function() {
+    let total = 0,
+        count = 0;
+
+        // Tek sada pozivamo funkciju processStudents
+        processStudents(students, function(obj) {
+          total = total + obj.score;
+          count++;
+        });
+
+        console.log("Total score: " + total + " - Total counts: " + count);
+  };
+
+  // Pozovemo funkciju determineTotal
+  determineTotal();
+</script>

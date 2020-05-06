@@ -1,0 +1,10 @@
+<script>
+let logCall = function() {
+  console.log("logCall funkcija je pozvana (called back) nakon sto se izvrsilo nesto sto traje 3 sekunde...")
+};
+
+setTimeout(logCall, 3000); // Predajemo Callback funkciju
+                           // koja je u ovom slucaju logCall
+
+console.log("Poruka na kraju...");
+</script>
