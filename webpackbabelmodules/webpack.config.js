@@ -4,10 +4,14 @@ const path = require('path'); // "path" je tzv. "core" modul tj. ne moramo ga in
 module.exports = {
   // Ovdje definisemo ulaznu tacku
   entry: {
-    app: './main.js' // Fajl koji zelimo da uzmemo da nam bude "izvorni" fajl (ES6/ES7 kod...)
+    app: [
+      'babel-polyfill',
+      './main.js' // Fajl koji zelimo da uzmemo da nam bude "izvorni" fajl (ES6/ES7 kod...)
+    ]
   },
   output: {
     path: path.resolve(__dirname, 'build'), // "__dirname" oznacava trenutni folder
+    publicPath: '/build/',
     filename: 'bundle.js'
   },
   module: {
