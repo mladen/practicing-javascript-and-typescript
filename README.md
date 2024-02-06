@@ -1,8 +1,17 @@
 ## JavaScript
 
+- [Dmitri Pavlutin (blog)](https://dmitripavlutin.com/)
+  - [JavaScript Closure: The Beginner's Friendly Guide](https://dmitripavlutin.com/javascript-closure/)
+  - [Gentle Explanation of "this" in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
+  - [5 Differences Between Arrow and Regular Functions](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/)
+  - [Pure Functions in JavaScript: A Beginner's Guide](https://dmitripavlutin.com/javascript-pure-function/)
+  - [4 Ways to Create an Enum in JavaScript](https://dmitripavlutin.com/javascript-enum/)
+  - ['return await promise' vs 'return promise' in JavaScript](https://dmitripavlutin.com/return-await-promise-javascript/)
+  - [How to Use fetch() with JSON](https://dmitripavlutin.com/fetch-with-json/)
+  - and many more great posts!
 - [TechyFreddy - WTF JavaScript. Arrays are Objects! But how?](https://www.youtube.com/watch?v=FTJDu7kkKWg)
 
-## JavaScript Data Structures
+### JavaScript Data Structures
 
 - [MonsterlessonsAcademy - Queue Javascript Data Structure - Learn the Algorithm](https://www.youtube.com/watch?v=K1tkSrG6_Ao)
 
@@ -34,9 +43,18 @@
 - [CodeBraces - Analog Clock HTML CSS Javascript Dark Mode](https://www.youtube.com/watch?v=NlAw_kd2608)
 - [Code Traversal (playlist)(Hindi) - JavaScript Projects for Beginners](https://www.youtube.com/playlist?list=PLMxec9nlD1X2ifPtxeu3Xm9nK1c4eBx2x)
 
+### Project ideas
+
+- Breakout
+- Lunar lander
+- Platformer game
+  - [Chris Courses - Vertical Platformer Game Tutorial with JavaScript and HTML Canvas](https://www.youtube.com/watch?v=rTVoyWu8r6g)
+  - [Chris Courses - Online Multiplayer JavaScript Game Tutorial - Full Course](https://www.youtube.com/watch?v=HXquxWtE5vA)
+
 ## Interesting and useful YouTube Channels
 
 - [The Coding Train](https://www.youtube.com/c/TheCodingTrain) - Daniel Shiffman; great projects and ideas
+- [Chris Courses](https://www.youtube.com/c/ChrisCourses) - Chris Sev; many JavaScript game tutorials (platformer, multiplayer...)
 - [Traversy Media](https://www.youtube.com/c/TraversyMedia)
 - [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified)
 - [FireShip](https://www.youtube.com/c/Fireship)
