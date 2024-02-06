@@ -33,3 +33,12 @@
 - [Robot Bobby - Create the Earth with THREE.js](https://www.youtube.com/watch?v=FntV9iEJ0tU)
 - [CodeBraces - Analog Clock HTML CSS Javascript Dark Mode](https://www.youtube.com/watch?v=NlAw_kd2608)
 - [Code Traversal (playlist)(Hindi) - JavaScript Projects for Beginners](https://www.youtube.com/playlist?list=PLMxec9nlD1X2ifPtxeu3Xm9nK1c4eBx2x)
+
+## Interesting and useful YouTube Channels
+
+- [The Coding Train](https://www.youtube.com/c/TheCodingTrain) - Daniel Shiffman; great projects and ideas
+- [Traversy Media](https://www.youtube.com/c/TraversyMedia)
+- [Web Dev Simplified](https://www.youtube.com/c/WebDevSimplified)
+- [FireShip](https://www.youtube.com/c/Fireship)
+- [Codevolution](https://www.youtube.com/c/Codevolution)
+- [Academind](https://www.youtube.com/c/Academind)
